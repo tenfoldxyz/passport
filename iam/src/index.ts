@@ -41,6 +41,7 @@ import { Providers } from "./utils/providers";
 // ---- Identity Providers
 import { SimpleProvider } from "./providers/simple";
 
+//HACK: Replaced with published package (@name/passport-platforms)
 import {
   Twitter,
   Ens,
@@ -63,7 +64,7 @@ import {
   Google,
   ClearText,
   Brightid,
-} from "@gitcoin/passport-platforms";
+} from "../../platforms/src/index";
 
 import { ClearTextSimpleProvider } from "./providers/clearTextSimple";
 
@@ -95,6 +96,7 @@ export const providers = new Providers([
   new Brightid.BrightIdProvider(),
   new Github.GithubProvider(),
   new Github.FiveOrMoreGithubRepos(),
+  new Github.FiveOrMoreCommitsOnGithubRepo(),
   new Github.TenOrMoreGithubFollowers(),
   new Github.FiftyOrMoreGithubFollowers(),
   new Github.ForkedGithubRepoProvider(),

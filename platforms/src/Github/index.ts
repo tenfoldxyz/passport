@@ -8,4 +8,5 @@ export {
   ForkedGithubRepoProvider,
   StarredGithubRepoProvider,
   FiveOrMoreGithubRepos,
+  FiveOrMoreCommitsOnGithubRepo,
 } from "./Providers";

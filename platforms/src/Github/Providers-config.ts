@@ -44,4 +44,13 @@ export const GithubProviderConfig: PlatformGroupSpec[] = [
       },
     ],
   },
+  {
+    platformGroup: "Commits",
+    providers: [
+      {
+        title: "Five or more commits on a specific Github repository",
+        name: "FiveOrMoreCommitsOnGithubRepo",
+      },
+    ],
+  },
 ];
