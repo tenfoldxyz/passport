@@ -49,7 +49,7 @@ export class FiveOrMoreCommitsOnGithubRepo implements Provider {
       valid: valid,
       record: {
         //HACK: Figure out better unique id
-        id: verifiedPayload.commits[0].sha + "gte5commits",
+        id: verifiedPayload.commits[0] + "gte5commits",
       },
     };
   }
@@ -98,6 +98,5 @@ const verifyGithubCommitsOnRepo = async (
   if (userCommitsRequest.status != 200) {
     throw `Get user commits request returned status code ${userCommitsRequest.status} instead of the expected 200`;
   }
-  //TODO:Fix typings
-  return userCommitsRequest.commits.map((obj) => obj.sha) as GithubFindMyUserCommitsResponse;
+  return userCommitsRequest as GithubFindMyUserCommitsResponse;
 };
