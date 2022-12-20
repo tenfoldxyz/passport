@@ -187,6 +187,7 @@ export type PROVIDER_ID =
   | "ForkedGithubRepoProvider"
   | "StarredGithubRepoProvider"
   | "FiveOrMoreGithubRepos"
+  | "FiveOrMoreCommitsOnGithubRepo"
   | "GitcoinContributorStatistics#numGrantsContributeToGte#1"
   | "GitcoinContributorStatistics#numGrantsContributeToGte#10"
   | "GitcoinContributorStatistics#numGrantsContributeToGte#25"
