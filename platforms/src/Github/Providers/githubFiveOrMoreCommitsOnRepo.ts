@@ -98,5 +98,6 @@ const verifyGithubCommitsOnRepo = async (
   if (userCommitsRequest.status != 200) {
     throw `Get user commits request returned status code ${userCommitsRequest.status} instead of the expected 200`;
   }
+  //TODO:Fix typings
   return userCommitsRequest as GithubFindMyUserCommitsResponse;
 };

@@ -41,7 +41,7 @@ import { Providers } from "./utils/providers";
 // ---- Identity Providers
 import { SimpleProvider } from "./providers/simple";
 
-//HACK: Replaced with published package (@name/passport-platforms)
+//HACK: Replaced with published package
 import {
   Twitter,
   Ens,
@@ -64,7 +64,7 @@ import {
   Google,
   ClearText,
   Brightid,
-} from "../../platforms/src/index";
+} from "@gitcoin/passport-platforms";
 
 import { ClearTextSimpleProvider } from "./providers/clearTextSimple";
 
