@@ -59,7 +59,7 @@
     "types": "yarn workspace @gitcoin/passport-types",
     "prestart": "yarn build:identity && yarn build:database-client && yarn build:platforms && yarn build:iam && yarn build:test-server",
     "pretest": "yarn build:identity && yarn build:database-client",
-    "postinstall": "yarn build:identity && yarn build:database-client && yarn build:platforms && yarn build:iam",
+    "postinstall": "yarn build:identity && yarn build:database-client && yarn build:platforms && yarn build:iam && yarn build:test-server",
     "test:ceramic-integration": "yarn workspace @gitcoin/passport-database-client test:integration"
   },
   "engines": {
