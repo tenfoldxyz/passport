@@ -41,7 +41,6 @@ import { Providers } from "./utils/providers";
 // ---- Identity Providers
 import { SimpleProvider } from "./providers/simple";
 
-//HACK: Replaced with published package
 import {
   Twitter,
   Ens,
