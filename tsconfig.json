@@ -1,11 +1,24 @@
 {
   "files": [],
   "references": [
-    { "path": "app" },
-    { "path": "iam" },
-    { "path": "identity" },
-    { "path": "types" },
+    {
+      "path": "app"
+    },
+    {
+      "path": "iam"
+    },
+    {
+      "path": "test-server"
+    },
+    {
+      "path": "identity"
+    },
+    {
+      "path": "types"
+    },
     // { "path": "signer" }
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
