@@ -32,13 +32,7 @@ export class FiveOrMoreCommitsOnGithubRepo implements Provider {
       verifiedPayload: GithubFindMyUserCommitsResponse = {};
 
     try {
-      verifiedPayload = await verifyGithubCommitsOnRepo(
-        payload.proofs.code,
-        payload.proofs.ownerUsername,
-        payload.proofs.repoName,
-        payload.proofs.authorUsername,
-        context
-      );
+      verifiedPayload = await verifyGithubCommitsOnRepo(payload.proofs.code, context);
     } catch (e) {
       return { valid: false };
     } finally {
@@ -79,14 +73,13 @@ export class FiveOrMoreCommitsOnGithubRepo implements Provider {
 
 const verifyGithubCommitsOnRepo = async (
   code: string,
-  repoName: string,
-  ownerUsername: string,
-  authorUsername: string,
   context: ProviderContext
 ): Promise<GithubFindMyUserCommitsResponse> => {
+  const ownerUsername = context.ownerUsername as string;
+  const repoName = context.repoName as string;
+  const authorUsername = context.authorUserName as string;
   // retrieve user's auth bearer token to authenticate client
   const accessToken = await requestAccessToken(code, context);
-
   // Now that we have an access token fetch the user details
   const userCommitsRequest = await axios.get(
     `https://api.github.com/repos/${ownerUsername}/${repoName}/commits/?${authorUsername}`,
